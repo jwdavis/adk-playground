@@ -4,7 +4,7 @@ The agent takes requests from the user and uses the built-in BigQuery tool to an
 
 ## Setup Instructions
 
-1. **Run the following bash commands**.
+1. **Run the following bash commands**
    ```bash
    git clone https://github.com/jwdavis/adk-playground.git
    cd adk-playground
@@ -12,6 +12,15 @@ The agent takes requests from the user and uses the built-in BigQuery tool to an
    source .venv/bin/activate
    pip install -r requirements.txt
    ```
+
+2. **Generate a `.env` file** in the current directory with the following contents (replace the placeholders with appropriate values):
+    ```bash
+    cat <<EOF > .env
+    GOOGLE_GENAI_USE_VERTEXAI=TRUE
+    GOOGLE_CLOUD_PROJECT=[project-id]
+    GOOGLE_CLOUD_LOCATION=[region]
+    EOF
+    ```
 
 ## Connect to the ADK Web UI
 
@@ -66,6 +75,6 @@ The agent takes requests from the user and uses the built-in BigQuery tool to an
 
     The agent will use BigQuery tools to execute these requests and provide you with results, query suggestions, and data analysis.
 
- 2. Show interesting context
+ 2. **Show interesting context**
     1. Show one or more traces,  highlighting how long each call takes.
     2.  Show one or More events. Show the visual representation of the agent, calling a tool function along with the JSON payload being sent to the tool step through the steps of the event, showing the back-and-forth flow of information.
