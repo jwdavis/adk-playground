@@ -25,7 +25,7 @@ from google.genai import types
 import google.auth
 
 # Define constants for this example agent
-AGENT_NAME = "bq-demo-agent"
+AGENT_NAME = "bq_demo_agent"
 GEMINI_MODEL = "gemini-2.0-flash"
 
 tool_config = BigQueryToolConfig(write_mode=WriteMode.BLOCKED)
